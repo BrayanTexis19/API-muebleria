@@ -11,7 +11,7 @@ class Mimodelo extends CI_Model {
     public function getCategorias($id=false) {
         // select * from categorias;
         if ($id!=false) {
-            $this->db->where('id_categorias', $id);
+            $this->db->where('id_categoria', $id);
         }
         $resultado = $this->db->get('categorias');
         if ($resultado->num_rows()>0)
@@ -27,12 +27,12 @@ class Mimodelo extends CI_Model {
 
     public function lessCategoria($id) {
         // insert into categorias values (...);
-        $this->db->where('id_categorias', $id);
+        $this->db->where('id_categoria', $id);
         $this->db->delete('categorias');
     }
 
     public function updateCategoria($id, $data) {
-        $this->db->where('id_catagorias', $id);
+        $this->db->where('id_categoria', $id);
         $this->db->update('categorias', $data);
     }
 

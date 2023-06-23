@@ -29,9 +29,9 @@ class Productos extends CI_Controller {
 
     public function insertarCategoria() {
         $valores = array(
-            'activo'   =>   $this->input->post('status'),
-            'fecha'    =>  date("Y-m-d H:i:s"),
             'nombre'   =>   $this->input->post('nombre'),
+            'fecha'    =>  date("Y-m-d H:i:s"),
+            'status'   =>   $this->input->post('status'),
         );
         $this->Mimodelo->addCategoria($valores);
     }
@@ -55,6 +55,16 @@ class Productos extends CI_Controller {
         );
 
         $this->load->view('Productos/actualizar_categoria_view', $data);
+    }
+
+    public function modificarCategoria() {
+        $id = $this->input->post('id_categoria');
+        $data = array(
+            'nombre'   =>   $this->input->post('nombre'),
+            'status'   =>   $this->input->post('status'),
+        );
+        $this->Mimodelo->updateCategoria($id, $data);
+        redirect(base_url('index.php/Productos/listaCategorias'));
     }
 
 }
