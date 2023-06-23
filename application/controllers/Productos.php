@@ -58,7 +58,7 @@ class Productos extends CI_Controller {
     }
 
     public function modificarCategoria() {
-        $id = $this->input->post('id_categoria');
+        $id = $this->uri->segment(3);
         $data = array(
             'nombre'   =>   $this->input->post('nombre'),
             'status'   =>   $this->input->post('status'),

@@ -6,8 +6,7 @@
     <title>Modificar categoria</title>
 </head>
 <body>
-    <form action="<?= base_url('index.php/Productos/modificarCategoria') ?>" method="post">
-        <input type="hidden" name="id_categoria" id="id_categoria" value="<?= $categoria->id_categoria ?>">
+    <form action="<?= base_url('index.php/Productos/modificarCategoria/'.$categoria->id_categoria ) ?>" method="post">
         <label for="">Nombre de la categoria</label>
         <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí" value="<?= $categoria->nombre ?>">
         <label for="">Status</label>
