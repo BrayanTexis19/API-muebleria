@@ -26,7 +26,7 @@
                         <tr>
                             <td><?= ++$contador ?></td>
                             <td><?= $categoria->nombre ?></td>
-                            <td><?= ($categoria->status==1) ? 'Activo':'Inactivo' ?></td>
+                            <td><?= ($categoria->activo==1) ? 'Activo':'Inactivo' ?></td>
                             <td>
                                 <a href="<?= base_url('index.php/actualizar_categoria/'. $categoria->id_categoria) ?>">Actualizar</a>
                                 <a href="<?= base_url('index.php/eliminar_categoria/'. $categoria->id_categoria) ?>">Eliminar</a>

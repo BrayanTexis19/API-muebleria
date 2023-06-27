@@ -61,7 +61,7 @@ class Productos extends CI_Controller {
         $id = $this->uri->segment(3);
         $data = array(
             'nombre'   =>   $this->input->post('nombre'),
-            'status'   =>   $this->input->post('status'),
+            'activo'   =>   $this->input->post('status'),
         );
         $this->Mimodelo->updateCategoria($id, $data);
         redirect(base_url('index.php/Productos/listaCategorias'));

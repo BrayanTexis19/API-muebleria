@@ -10,7 +10,7 @@
         <label for="">Nombre de la categoria</label>
         <input type="text" name="nombre" id="nombre" placeholder="Escriba aquí" value="<?= $categoria->nombre ?>">
         <label for="">Status</label>
-        <input type="number" name="status" id="status" min=0 max=1 value="<?= $categoria->status ?>">
+        <input type="number" name="status" id="status" min=0 max=1 value="<?= $categoria->activo ?>">
         <button type="submit">Aceptar</button>
     </form>
 </body>
